@@ -2,10 +2,11 @@ package heranca;
 
 import javax.swing.JOptionPane;
 
-public class Conta {
+public abstract class Conta {
 
 	protected double saldo;
 	public int conta;
+	public String nome;
 
 	public void sacar(double valor) {
 		// this.saldo = this.saldo - valor;
@@ -16,6 +17,9 @@ public class Conta {
 			JOptionPane.showMessageDialog(null, " Você não tem limite suficiente para realizar o saque.");
 		}
 	}
+	
+	// Método Abstrato
+	protected abstract void juros();
 
 	public void depositar(double valor) {
 		this.saldo += valor;

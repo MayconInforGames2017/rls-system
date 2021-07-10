@@ -1,13 +1,15 @@
 package heranca;
 
-public class ContaPoupanca extends Conta {
+// Final class não permite que essa classe seja herdada
+public final class ContaPoupanca extends Conta {
 
 	public void depositar(double valor) {
 		super.depositar(valor);
-		this.Juros();
+		this.juros();
 	}
 	
-	private void Juros() {
+	@Override
+	protected void juros() {
 		this.saldo += 1;
 	}
 	
