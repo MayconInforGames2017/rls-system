@@ -19,6 +19,9 @@ public class Conta {
 
 	public void depositar(double valor) {
 		this.saldo += valor;
+		if (valor >= 100) {
+			JOptionPane.showMessageDialog(null, " Você foi sorteado.");
+		}
 	}
 
 	public void consultarSaldo() {
